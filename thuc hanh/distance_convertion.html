@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <pre style="font-family: 'Times New Roman', Times, serif;">Distance convertion Feet <----> Meter</pre>
+    <div><input type="number" id="inputValue" oninput="solve(this.value)"></div>
+    <div>
+        <select name="" id="fromUnitToUnit">
+            <option value="meterToFeet">Meter --> Feet</option>
+            <option value="feetToMeter">Feet --> Meter</option>
+        </select>
+    </div>
+    <div id="result"></div>
+</body>
+</html>
+<script>
+    let inputValue = document.getElementById('inputValue').value;
+    function solve(inputValue){
+        inputValue = parseFloat(inputValue);
+        let result;
+        let changeValue = document.getElementById('fromUnitToUnit').value;
+        if (changeValue === 'meterToFeet') {
+            result = inputValue * 3.279 + ' ft';
+        } else {
+            result = inputValue * 0.305 + ' m';
+        }
+        document.getElementById('result').innerHTML = result;
+    }
+  
+
+</script>
