@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            width: 982px;
+            padding: 0;
+            margin: 0 auto;
+        }
+        .wrap {
+            width: 982px;
+            float: left;
+        }
+
+        #header {
+            width: 980px;
+            float: left;
+            background-color:white;
+        }
+        #header p {
+            text-align: center;
+        }
+        .main {
+            width: 980px;
+            float: left;
+        }
+        .nav {
+            width: 151px;
+            float: left;
+            background-color: royalblue;
+        }
+        .content {
+            width: 829px;
+            float: left;
+            background-color: salmon;
+        }
+        #footer {
+            width: 980px;
+            float: left;
+            background-color: silver;
+        }
+        .btn_nav1 {
+            width: 150px;
+            height: 20px;
+            margin: 1px auto;
+        }
+
+        .btn_nav2 {
+            width: 150px;
+            height: 50px;
+            margin: 20px auto;
+        }
+
+        #display {
+            width: 400px;
+            height: 270px;
+            margin: auto;
+            background-color: thistle;
+        }
+        #btn_change {
+            width: 96px;
+            height: 45px;
+            margin: auto;
+            background-color: salmon;
+        }
+        #btn_div {
+            width: 150px;
+            height: 282px;
+            margin: 16px auto;
+        }
+        .btn_change_img {
+            width: 30px;
+            height: 30px;
+        }
+       .btn_change {
+           background-color: white;
+       }
+       #head_display {
+           width: 400px;
+           height: 40px;
+           float: left;
+           background-color: turquoise;
+        
+       }
+       #empty_display {
+            width: 350px;
+            height: 40px;
+            float: left;
+            background-color: yellowgreen;
+
+       }
+       
+       #slide {
+           width: 100%;
+           height: 50%;
+           margin: 0 auto;
+           text-align: center;
+           color: snow;
+       }
+
+       #sound_img {
+           width: 30px;
+           height: 30px;
+       }
+
+       #btn_sound_img {
+           width: 50px;
+           height: 40px;
+           background-color: white;
+       }
+
+       #content_card {
+           width: 400px;
+           height: 230px;
+           float: left;
+       }
+       #display_content_card {
+           width: 50%;
+           height: 100% ;
+           margin: 0 auto;
+           background-color: sienna;
+       }
+       #display_word_div {
+        width: 50%;
+           height: 50%;
+           margin: 10px auto;
+           background-color: sienna;
+           display: flex;
+       }
+       #input1 {
+           width: 50%;
+           height: 50%;
+           margin: 10px auto;
+           background-color: sienna;
+           display: flex;
+       }
+
+       #input2 {
+           width: 50%;
+           height: 50%;
+           margin: 10px auto;
+           background-color: sienna;
+           display: flex;
+       }
+       #inputValue1 {
+           width: 100%;
+           height: 100%;
+           background-color: ivory;
+       }
+
+       #inputValue2 {
+           width: 100%;
+           height: 100%;
+           background-color: ivory;
+       }
+       #display_word {
+            width: 100%;
+            height: 100%;
+            vertical-align: middle;
+            background-color: ivory;
+       }
+
+       #answer_btn_div {
+           width: 100%;
+           height: 50%;
+           margin: 10px auto;
+           
+       }
+       #answer_btn {
+           width: 100%;
+           height: 20%;
+           
+       }
+       #footer {
+           text-align: right;
+       }
+       
+    </style>
+</head>
+<body>
+    <input type="text" placeholder="">
+    <div class = "wrap">
+        <div id="header"><p>DEMO APPLICATION FLASH CARD</p></div>
+        <div class="main">
+            <div class="nav">
+                <div id="btn_div">
+                    <button class="btn_nav1" onclick="addANewWord()" type="button">ADD A eng word</button>
+                    <button class="btn_nav1" type="button" onclick="takeMean()">Take it mean</button>
+                    <button class="btn_nav1" type="button" onclick="saveThisWord()">Save the word</button>
+                    <button class="btn_nav1" type="button">DELETE THIS WORD</button>
+                    <button class="btn_nav2" type="button" onclick="startTheLesson()">Start the lesson</button>
+                    <button class="btn_nav2" type="button" onclick="finishTheLesson()">Finish the lesson</button>
+
+                </div>
+            </div>
+            <div class="content">
+                <div id="btn_change">
+                    <button class="btn_change" onclick="previous_btn()"><img src="green_globe_next_590 - Copy.jpg" alt="image not found!!!" class="btn_change_img"></button>
+                    <button class="btn_change" onclick="next_btn()"><img src="green_globe_next_590.jpg" alt="image not found!!!" class="btn_change_img"></button> 
+                </div>
+                <div id="display">
+                    <div id="head_display">
+                        <div id="empty_display">
+                            <h1 id="slide"></h1>
+                        </div>
+                        <div id="btn_sound"><button id="btn_sound_img"><img src="sound-wallpaper-1.jpg" alt="image not found!" id="sound_img"></button></div>
+                    </div>
+                    <div id="content_card">
+                        <div id="display_content_card">
+                            <div id="display_word_div" class="display_content_card"><p id="display_word"></p></div>
+                            <!-- <div id="input"><input type="text" id="inputValue"></div> -->
+                            <div id="answer_btn_div" class="display_content_card"><button id = "answer_btn" onclick="answer_btn()">Translate</button></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="footer">
+            <h2 >Bản quyền bởi Tran Quang Dinh </h2>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    let engWords = ['dog','cat','fish','cow','chicken','tiger'];
+    let viWords = ['chó','mèo','cá','bò','gà','hổ'];
+    
+    let i = 0;
+    
+    function previous_btn() {
+        if (i > 0) {
+            i-=1;
+            document.getElementById('display_word').innerHTML = engWords[i];
+            document.getElementById('slide').innerHTML = 'Slide ' + (i+1) + ' / ' + engWords.length;
+        } else if ( i === 0) {
+            document.getElementById('display_word').innerHTML = engWords[i];
+            document.getElementById('slide').innerHTML = 'Slide ' + (i+1) + ' / ' + engWords.length;
+        }
+    }
+
+    function next_btn() {
+        if (i === engWords.length -1) {
+            document.getElementById('display_word').innerHTML = engWords[i];
+            document.getElementById('slide').innerHTML = 'Slide ' + (i+1) + ' / ' + engWords.length;
+        } else if ( i < engWords.length - 1) {
+            i+=1;
+            document.getElementById('display_word').innerHTML = engWords[i];
+            document.getElementById('slide').innerHTML = 'Slide ' + (i+1) + ' / ' + engWords.length;
+        }
+    }
+    
+    function answer_btn() {
+        document.getElementById('display_word').innerHTML = viWords[i];
+    }
+
+    function addANewWord() {
+        document.getElementById('display_word_div').innerHTML = '<input type="text" id="inputValue">';
+        let engWord = document.getElementById('inputValue').value;
+    }
+    addANewWord()
+    console.log(engWord);
+
+</script>
