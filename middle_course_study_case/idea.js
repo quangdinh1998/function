@@ -2,6 +2,12 @@ let engWords = ['dog','cat','fish','cow','chicken','tiger'];
     let viWords = ['chó','mèo','cá','bò','gà','hổ'];
     
     let i = 0;
+    let stt = true;
+    if (document.getElementById('display_word').innerHTML === engWords[i]) {
+        stt = true;
+    } else {
+        stt = false;
+    }
     
     function previous_btn() {
         if (i > 0) {
@@ -26,7 +32,13 @@ let engWords = ['dog','cat','fish','cow','chicken','tiger'];
     }
     
     function answer_btn() {
-        document.getElementById('display_word').innerHTML = viWords[i];
+        if (stt === true) {
+            document.getElementById('display_word').innerHTML = viWords[i];
+            stt = false;
+        } else {
+            document.getElementById('display_word').innerHTML = engWords[i];
+            stt = true;
+        }
     }
 
 
