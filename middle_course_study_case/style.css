@@ -1,0 +1,173 @@
+body {
+    width: 982px;
+    padding: 0;
+    margin: 0 auto;
+}
+.wrap {
+    width: 982px;
+    float: left;
+}
+
+#header {
+    width: 980px;
+    float: left;
+    background-color:white;
+}
+#header p {
+    text-align: center;
+}
+.main {
+    width: 980px;
+    float: left;
+}
+.nav {
+    width: 151px;
+    float: left;
+    background-color: royalblue;
+}
+.content {
+    width: 829px;
+    float: left;
+    background-color: salmon;
+}
+#footer {
+    width: 980px;
+    float: left;
+    background-color: silver;
+}
+.btn_nav1 {
+    width: 150px;
+    height: 20px;
+    margin: 1px auto;
+}
+
+.btn_nav2 {
+    width: 150px;
+    height: 50px;
+    margin: 5px auto;
+}
+
+#display {
+    width: 400px;
+    height: 270px;
+    margin: auto;
+    background-color: thistle;
+}
+#btn_change {
+    width: 96px;
+    height: 45px;
+    margin: auto;
+    background-color: salmon;
+}
+#btn_div {
+    width: 150px;
+    height: 282px;
+    margin: 16px auto;
+}
+.btn_change_img {
+    width: 30px;
+    height: 30px;
+}
+.btn_change {
+   background-color: white;
+}
+#head_display {
+   width: 400px;
+   height: 40px;
+   float: left;
+   background-color: turquoise;
+
+}
+#empty_display {
+    width: 350px;
+    height: 40px;
+    float: left;
+    background-color: yellowgreen;
+
+}
+
+#slide {
+   width: 100%;
+   height: 50%;
+   margin: 0 auto;
+   text-align: center;
+   color: snow;
+}
+
+#sound_img {
+   width: 30px;
+   height: 30px;
+}
+
+#btn_sound_img {
+   width: 50px;
+   height: 40px;
+   background-color: white;
+}
+
+#content_card {
+   width: 400px;
+   height: 230px;
+   float: left;
+}
+#display_content_card {
+   width: 50%;
+   height: 100% ;
+   margin: 0 auto;
+   background-color: sienna;
+}
+#display_word_div {
+width: 50%;
+   height: 50%;
+   margin: 10px auto;
+   background-color: sienna;
+   display: flex;
+}
+#inputValueEng {
+   width: 100%;
+   height: 100%;
+   margin: 10px auto;
+   background-color: ivory;
+   display: flex;
+}
+
+#inputValueVi {
+   width: 100%;
+   height: 100%;
+   margin: 10px auto;
+   background-color: ivory;
+   display: flex;
+}
+#inputValue1 {
+   width: 100%;
+   height: 100%;
+   background-color: ivory;
+}
+
+#inputValue2 {
+   width: 100%;
+   height: 100%;
+   background-color: ivory;
+}
+#display_word {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+
+    background-color: ivory;
+}
+
+#answer_btn_div {
+   width: 100%;
+   height: 50%;
+   margin: 10px auto;
+   
+}
+#answer_btn {
+   width: 100%;
+   height: 20%;
+   
+}
+#footer {
+   text-align: right;
+}
