@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <script>
+        let inputValue = prompt(' Nhap ten cua ngoi sao: ');
+        let starName = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus'];
+        let unitedStarName = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major', 'Leo'];
+        function arrFunc(inputValue) {
+            for ( let i = 0; i< starName.length; i++) {
+                if (inputValue === starName[i]) {
+                    alert(unitedStarName[i]);
+                    return;
+                } else {
+                    alert(' Khong co ngoi sao ten nay');
+                    return;
+                }
+            }
+        }
+        arrFunc(inputValue);
+        
+    </script>    
+</body>
+</html>
