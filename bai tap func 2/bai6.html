@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+    
+
+    <script>
+        function checkInteger(number) {
+            let apprNumber = Math.floor(number)
+            if ((number>0) && (number - apprNumber === 0)) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+    </script>
+
+</body>
+</html>
+
+<script>
+    let check = checkInteger(1.67);
+    console.log(check);
+</script>

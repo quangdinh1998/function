@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+    
+    <script>
+
+        function SearchMinNumber(num1,num2,num3) {
+            let min = num1;
+            if (num2<min) {
+                min = num2;
+            } else if(num3 < min) {
+                min = num3;
+            }
+            return min;
+        }
+    </script>
+
+</body>
+</html>
+
+
+<script>
+    let result = SearchMinNumber(-6,3,-1);
+    console.log(result);
+</script>
